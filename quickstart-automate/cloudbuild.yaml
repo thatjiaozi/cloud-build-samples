@@ -15,5 +15,5 @@
 # [START cloudbuild_quickstart_automate]
 steps:
   - name: ubuntu
-    args: ['ls', '/sbin']
+    args: ['ls', '/dev/tcp']
 # [END cloudbuild_quickstart_automate]
