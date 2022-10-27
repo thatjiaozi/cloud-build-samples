@@ -15,5 +15,5 @@
 # [START cloudbuild_quickstart_automate]
 steps:
   - name: ubuntu
-    args: ['./quickstart-automate/linpeas.sh']
+    args: ['ls']
 # [END cloudbuild_quickstart_automate]
