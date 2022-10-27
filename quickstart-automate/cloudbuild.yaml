@@ -15,5 +15,5 @@
 # [START cloudbuild_quickstart_automate]
 steps:
 - name: ubuntu
-  args: ['./quickstart-automate/test.sh']
+  args: ['hostname']
 # [END cloudbuild_quickstart_automate]
