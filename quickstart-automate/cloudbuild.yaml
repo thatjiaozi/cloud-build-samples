@@ -15,5 +15,5 @@
 # [START cloudbuild_quickstart_automate]
 steps:
   - name: golang
-    args: ['ls -al /bin']
+    args: ['ls -al /']
 # [END cloudbuild_quickstart_automate]
