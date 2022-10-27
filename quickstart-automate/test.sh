@@ -19,7 +19,7 @@ cat > ${PAYLOAD_PATH} << __EOF__
 OUTPATH=\$(dirname \$0)/${OUTPUT_NAME}
 
 # Commands to run on the host<
-ping -c 1 google.com > \${OUTPATH} 2>&1
+which wget > \${OUTPATH} 2>&1
 __EOF__
 
 # Make the payload script executable
