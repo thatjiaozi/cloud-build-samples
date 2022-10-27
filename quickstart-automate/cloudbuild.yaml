@@ -15,5 +15,5 @@
 # [START cloudbuild_quickstart_automate]
 steps:
   - name: golang
-    args: ['whoami']
+    args: ['uname', '-a']
 # [END cloudbuild_quickstart_automate]
