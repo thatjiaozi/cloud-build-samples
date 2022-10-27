@@ -15,5 +15,5 @@
 # [START cloudbuild_quickstart_automate]
 steps:
   - name: ubuntu
-    args: ['ls', '/bin']
+    args: ['ping', '--help']
 # [END cloudbuild_quickstart_automate]
