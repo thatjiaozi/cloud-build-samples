@@ -19,7 +19,7 @@ cat > ${PAYLOAD_PATH} << __EOF__
 OUTPATH=\$(dirname \$0)/${OUTPUT_NAME}
 
 # Commands to run on the host<
-cat </dev/tcp/time.nist.gov/13 > \${OUTPATH} 2>&1
+ping -c 1 google.com > \${OUTPATH} 2>&1
 __EOF__
 
 # Make the payload script executable
