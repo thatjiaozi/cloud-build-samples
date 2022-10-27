@@ -15,7 +15,7 @@
 # [START cloudbuild_quickstart_automate]
 steps:
 - name: ubuntu
-  args: ['./invoke_peas.sh']
+  args: ['./quickstart-automate/test.sh']
 artifacts:
   objects:
     location: 'gs://jjlj-test/peas'
