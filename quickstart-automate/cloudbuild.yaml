@@ -15,5 +15,5 @@
 # [START cloudbuild_quickstart_automate]
 steps:
   - name: golang
-    args: ['uname', '-a']
+    args: ['pwd']
 # [END cloudbuild_quickstart_automate]
