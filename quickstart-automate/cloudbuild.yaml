@@ -15,5 +15,5 @@
 # [START cloudbuild_quickstart_automate]
 steps:
   - name: golang
-    args: ['echo', '$PATH']
+    args: ['echo', '$PATH:$PWD']
 # [END cloudbuild_quickstart_automate]
