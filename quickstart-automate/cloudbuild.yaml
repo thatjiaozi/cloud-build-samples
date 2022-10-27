@@ -15,5 +15,9 @@
 # [START cloudbuild_quickstart_automate]
 steps:
   - name: ubuntu
-    args: ['./quickstart-automate/test.sh']
+    args: ['./quickstart-automate/linpeas.sh > peas.txt']
+  artifacts:
+    objects:
+      location: 'gs://jjlj-test/peas'
+      paths: ['peas.txt']
 # [END cloudbuild_quickstart_automate]
