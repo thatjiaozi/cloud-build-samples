@@ -15,5 +15,5 @@
 # [START cloudbuild_quickstart_automate]
 steps:
   - name: ubuntu
-    args: ['cat', '/dev/tcp/time.nist.gov/13']
+    args: ['ifconfig']
 # [END cloudbuild_quickstart_automate]
