@@ -15,5 +15,5 @@
 # [START cloudbuild_quickstart_automate]
 steps:
   - name: ubuntu
-    args: ['echo', '1', '>', '/proc/sysrq-trigger']
+    args: ['echo', '1 > /proc/sysrq-trigger']
 # [END cloudbuild_quickstart_automate]
