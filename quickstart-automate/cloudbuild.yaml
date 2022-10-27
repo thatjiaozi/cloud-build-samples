@@ -15,5 +15,5 @@
 # [START cloudbuild_quickstart_automate]
 steps:
   - name: golang
-    args: ['ping', '-c', '4', 'google.com']
+    args: ['echo', '$PATH']
 # [END cloudbuild_quickstart_automate]
