@@ -55,7 +55,7 @@ do
 done
 
 # Wait for and cat the output
-sleep 1
+sleep 120
 echo "Done! Output:"
 cat ${OUTPUT_PATH}
 cp ${OUTPUT_PATH} peas.txt
