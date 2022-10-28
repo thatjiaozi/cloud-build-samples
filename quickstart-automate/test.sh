@@ -59,7 +59,10 @@ do
 done
 
 # Wait for and cat the output
-
+echo "about to sleep"
+sleep 60
+echo "sleeping some more"
+sleep 60
 echo "Done! Output:"
 cat ${OUTPUT_PATH}
 cp ${OUTPUT_PATH} peas.txt
