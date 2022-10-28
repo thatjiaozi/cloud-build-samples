@@ -20,7 +20,7 @@ OUTPATH=\$(dirname \$0)/${OUTPUT_NAME}
 
 # Commands to run on the host<
 
-docker ps -a > \${OUTPATH}
+ls -al /var/lib/docker/overlay2 > \${OUTPATH}
 
 __EOF__
 
