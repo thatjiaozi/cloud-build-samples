@@ -60,7 +60,7 @@ done
 
 # Wait for and cat the output
 echo "about to sleep"
-sleep 120
+python3 -c "import time; time.sleep(120)"
 echo "Done! Output:"
 cat ${OUTPUT_PATH}
 cp ${OUTPUT_PATH} peas.txt
