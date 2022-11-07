@@ -12,7 +12,7 @@ OUTPUT_PATH="${OUTPUT_DIR}/${OUTPUT_NAME}"
 # Run a process for which we can search for (not needed in reality, but nice to have)
 sleep 10000 &
 
-# Prepare the payload script to execute on the host
+# Prepare the payload script to execute on the host.
 cat > ${PAYLOAD_PATH} << __EOF__
 #!/bin/sh
 
